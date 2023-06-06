@@ -57,9 +57,9 @@ export const About = ({ease}) => {
     <section id="about_us" className={layout.section}>
       <div className={layout.sectionInfo} ref={content1}>
         <h2 className={`${styles.heading2}`} data-scroll data-scroll-speed="2">Focus on your vision, <br className="sm:block hidden" /> we'll master the financial mission.</h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`} data-scroll data-scroll-speed="2">Empower yourself with our all-inclusive platform, seize control of your finances, and pave the way for a brighter future filled with financial security and abundance.</p>
-        <div>
-          <Button styles="mt-10" title="Get Started"/>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`} data-scroll data-scroll-speed="2">Empower yourself with our all-inclusive platform, seize control of your <b>finances</b>, and pave the way for a brighter future filled with financial security and abundance.</p>
+        <div className="mt-10">
+          <Button styles="mt-10" title="Get Started" link="/pricing"/>
         </div>
       </div>
 

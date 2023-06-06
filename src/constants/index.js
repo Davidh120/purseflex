@@ -13,12 +13,12 @@ export const navLinks = [
     page: false
   },
   {
-    id: "/pricing",
+    id: "/purseflex/pricing",
     title: "Pricing",
     page: true
   },
   {
-    id: "/login",
+    id: "/purseflex/login",
     title: "Login",
     page: true
   },

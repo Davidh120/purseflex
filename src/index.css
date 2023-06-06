@@ -34,28 +34,29 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(92, 225, 230);
+  background-color: #c936e8;
   border-radius: 4px;
 }
 
-.logo{
+.logo {
   font-family: var(--logo-font);
   color: #fff;
 }
 
-#choose_us, #about_us{
+#choose_us,
+#about_us {
   will-change: opacity;
 }
 
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    #ffffff -43.27%,
+    #e5c9f9 -21.24%,
+    #c936e8 12.19%,
+    #b84ae4 29.82%,
+    #a05ee0 51.94%,
+    #8951dd 90.29%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,12 +66,24 @@
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
-    #def9fa -43.27%,
-    #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
+    #ffffff -43.27%,
+    #e5c9f9 -21.24%,
+    #c936e8 12.19%,
+    #b84ae4 29.82%,
+    #a05ee0 51.94%,
+    #8951dd 90.29%
+  );
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #ffffff -43.27%,
+    #e5c9f9 -21.24%,
+    #c936e8 12.19%,
+    #b84ae4 29.82%,
+    #a05ee0 51.94%,
+    #8951dd 90.29%
   );
 }
 
@@ -104,16 +117,100 @@
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
+.bg-glass {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
-.sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.slide-in {
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.bg-nav{
+.slide-out {
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    -o-transform: translateX(1000px);
+    -webkit-transform: translateX(1000px);
+}
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    -o-transform: translateX(1000px);
+    -webkit-transform: translateX(1000px);
+}
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+}
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    -o-transform: translateX(1000px);
+}
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+}
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    -o-transform: translateX(1000px);
+    -webkit-transform: translateX(1000px);
+}
+}
+
+.bg-nav {
   background: #00040fa9;
   transition: 1s;
   -webkit-transition: 1s;
@@ -122,7 +219,7 @@
   -o-transition: 1s;
 }
 
-.bg-non-nav{
+.bg-non-nav {
   background: transparent;
   transition: 1s;
   -webkit-transition: 1s;
@@ -131,54 +228,15 @@
   -o-transition: 1s;
 }
 
-.sign-btn:hover{
-  background: #33bbcf;
-  border-color: #33bbcf;
-  color: #00040f;
+.sign-btn:hover {
+  background: #c936e8;
+  border-color: #c936e8 ;
+  color: #fff;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.feature-card:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
-}
-
-.feedback-container .feedback-card:last-child {
-  margin-right: 0px;
-}
-
-.feedback-card {
-  background: transparent;
-}
-
-.feedback-card:hover {
-  background: var(--black-gradient);
 }
 
 .blue__gradient {
@@ -188,7 +246,7 @@
 }
 
 .pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  background: linear-gradient(90deg, #f4c4f3 0%, #c936e8 100%);
   filter: blur(900px);
   -webkit-filter: blur(900px);
 }
@@ -197,6 +255,32 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
   -webkit-filter: blur(750px);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "🗸";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  background-color: #c936e8;
 }
 
 /* lenis */
@@ -218,5 +302,5 @@ html.lenis {
 }
 
 .lenis.lenis-scrolling iframe {
-   pointer-events: none;
+  pointer-events: none;
 }

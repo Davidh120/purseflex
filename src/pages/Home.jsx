@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import styles from './style'
-import { Nav, Home, Choose, About, Footer } from './components'
-import { Scroll } from './components/Scroll'
+import styles from '../style'
+import { Nav, Home, Choose, About, Footer } from '../components'
+import { Scroll } from '../components/Scroll'
 
 //GSAP
 import { gsap, Power3 } from "gsap"

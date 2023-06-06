@@ -79,8 +79,8 @@ export const Choose = ({ ease }) => {
         <p className={`${styles.paragraph} mt-5`} ref={paragraph}>
           At PurseFlex, gain ultimate financial control with our powerful platform, blending cutting-edge technology and personalized insights for a secure and prosperous future.
         </p>
-        <div ref={btn}>
-          <Button styles="mt-10" title="Try free now" />
+        <div ref={btn} className="mt-10">
+          <Button styles="mt-10" title="Try free now" link="/pricing"/>
         </div>
         <div className="absolute z-[0] w-[35%] h-[20%] right-20 pink__gradient" />
       </div>

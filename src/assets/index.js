@@ -17,6 +17,7 @@ import comparison from "./svg/comparison.svg";
 import lock from "./svg/lock-alt.svg"
 import eye from "./svg/eye.svg"
 import analysis from "./img/dashboard.png"
+import errorImg from "./img/404.png"
 
 export {
   quotes,
@@ -38,4 +39,5 @@ export {
   lock,
   eye,
   analysis,
+  errorImg
 };

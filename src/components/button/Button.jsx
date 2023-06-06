@@ -1,9 +1,9 @@
 import { arrowUp } from "../../assets"
 
-export const Button = ({ styles, title }) => {
+export const Button = ({ styles, title, link }) => {
   return (
-    <button type='button' className={`py-4 px-6 bg-blue-gradient font-poppins font-medium text-[18px] text-primary outline-none rounded-[10px] ${styles}`}>
+    <a href={`/purseflex${link}`} className={`py-4 px-6 bg-purple-gradient font-semibold text-white outline-none rounded-[10px] ${styles}`}>
       {title}
-    </button>
+    </a>
   )
 }

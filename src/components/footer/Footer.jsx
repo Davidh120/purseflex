@@ -5,7 +5,7 @@ export const Footer = () => (
   <section id="footer" className={`${styles.flexCenter} sm:pt-16 pt-6 flex-col`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
       <div className="flex-1 flex flex-col justify-start mr-10">
-        <h1 className='logo text-4xl object-contain'>PurseFlex</h1>
+        <h1 className='logo text-4xl object-contain'>Purse<span className='text-purple-500'>Flex</span></h1>
         <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>Empower your finances with seamless control and unmatched security.</p>
       </div>
 
@@ -15,7 +15,7 @@ export const Footer = () => (
             <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">{footerLink.title}</h4>
             <ul className="list-none mt-4">
               {footerLink.links.map((link, index) => (
-                <li id={link.name} key={link.name} className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${index !== footerLink.links.length-1 ? 'mb-4' : 'mb-0'}`}>{link.name}</li>
+                <li id={link.name} key={link.name} className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-purple-500 cursor-pointer ${index !== footerLink.links.length-1 ? 'mb-4' : 'mb-0'}`}>{link.name}</li>
               ))}
             </ul>
           </div>

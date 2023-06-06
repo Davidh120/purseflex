@@ -6,7 +6,7 @@ import { dashboard } from "../../assets"
 import { Discount } from "../discount/Discount"
 import { Button } from "../button/Button"
 
-export const Home = ({timeline, ease}) => {
+const Home = ({timeline, ease}) => {
   let home = useRef(null);
   let images = useRef(null);
   let content = useRef(null);
@@ -17,10 +17,10 @@ export const Home = ({timeline, ease}) => {
     const contentP = content.children[2]
     const contentButton = content.children[3]
 
+    timeline.staggerFrom([headlineFirst, headlineSecond, contentP, contentButton], .7, {opacity: 0, x: -200, skewY:10, ease: ease}, .15)
+
     timeline.from(images, 1, {opacity: 0, x: 1000, ease: ease})
       .from(images, 1.5, {scale:1.6, ease: ease}, "-=1", .15)
-
-    timeline.staggerFrom([headlineFirst, headlineSecond, contentP, contentButton], .7, {opacity: 0, x: -200, skewY:10, ease: ease}, .15)
   }, [])
 
   return (
@@ -36,8 +36,8 @@ export const Home = ({timeline, ease}) => {
         <h2 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
           Control Tools.
         </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Through our cutting-edge web platform, we provide a comprehensive financial control service to empower you in managing your finances effectively. </p>
-        <Button styles="mt-10" title="Get Started fro Free" />
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Through our cutting-edge web platform, we provide a comprehensive <em>financial control service</em> to empower you in managing your finances effectively. </p>
+        <Button styles="mt-10" title="Get Started fro Free" link="/pricing" />
       </div>
       <div className={`flex-1 flex ${styles.flexCenter} md:ml-0 ml-20 md:my-0 my-5 relative`}>
         <img src={dashboard} alt="robot" className="w-[100%] h-[100%] relative z-[5]" ref={el => images = el}/>
@@ -51,3 +51,5 @@ export const Home = ({timeline, ease}) => {
     </section>
   )
 }
+
+export default Home
