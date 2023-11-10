@@ -15,7 +15,7 @@ const Login = () => {
             </header>
 
             <main>
-                <div className={`bg-primary ${styles.flexStart}`}>
+                <div className={`bg-primary ${styles.flexCenter} h-screen`}>
                     <div className={`${styles.boxWidth}`}>
                         <SignIn />
                     </div>

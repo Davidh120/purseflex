@@ -24,7 +24,7 @@ const Home = ({timeline, ease}) => {
   }, [])
 
   return (
-    <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY} mt-10`} ref={el => home = el}>
+    <section id='home' className={`md:flex-row flex-col ${styles.flexStart} ${styles.paddingY} ${styles.marginY} mt-10 h-full content-center`} ref={el => home = el}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`} ref={el => content = el}>
         {/* <Discount percentage="25%"/> */}
         <div className="flex flex-row justify-between items-center w-full">

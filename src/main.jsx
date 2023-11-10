@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
     },
     {
-        path: "/purseflex/*",
+        path: "*",
         element: <ErrorPage />
     }
 ]);

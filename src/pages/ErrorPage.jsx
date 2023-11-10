@@ -19,7 +19,7 @@ export default function ErrorPage() {
       </header>
 
       <main>
-        <div className={`bg-primary ${styles.flexStart}`}>
+        <section className={`bg-primary ${styles.flexCenter} content-center h-screen`}>
           <div className={`${styles.boxWidth}`}>
             <section className={`flex md:flex-row flex-col sm:px-16 px-6 md:mt-6 mt-20`}>
               <div className={`flex flex-1 flex-col ${styles.flexStart}`}>
@@ -36,7 +36,7 @@ export default function ErrorPage() {
               </div>
             </section>
           </div>
-        </div>
+        </section>
       </main>
 
       <footer className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>

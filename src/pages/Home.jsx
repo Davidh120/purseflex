@@ -23,13 +23,13 @@ const App = () => {
       </header>
 
       <main>
-        <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`bg-primary ${styles.flexCenter} h-screen`}>
           <div className={`${styles.boxWidth}`}>
             <Home timeline={tl} ease={ease}/>
           </div>
         </div>
 
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`bg-primary ${styles.paddingX} ${styles.flexStart} content-center`}>
           <div className={`${styles.boxWidth}`}>
             {/* <Stats /> */}
             <About ease={ease} />
