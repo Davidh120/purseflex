@@ -54,7 +54,7 @@ export const About = ({ease}) => {
   }, []);
 
   return (
-    <section id="about_us" className={`${layout.section} h-screen`}>
+    <section id="about_us" className={`${layout.section} lg:h-screen`}>
       <div className={layout.sectionInfo} ref={content1}>
         <h2 className={`${styles.heading2}`} data-scroll data-scroll-speed="2">Focus on your vision, <br className="sm:block hidden" /> we'll master the financial mission.</h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`} data-scroll data-scroll-speed="2">Empower yourself with our all-inclusive platform, seize control of your <b>finances</b>, and pave the way for a brighter future filled with financial security and abundance.</p>

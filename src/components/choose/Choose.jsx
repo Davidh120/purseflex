@@ -66,7 +66,7 @@ export const Choose = ({ ease }) => {
   }, []);
 
   return (
-    <section id="choose_us" className={`${layout.sectionReverse} h-screen`}>
+    <section id="choose_us" className={`${layout.sectionReverse} lg:h-screen`}>
       <div className={`${layout.sectionImgReverse}`}>
         <img src={analysis} alt="analysis" className="w-[100%] h-auto relative z-[5] rounded-md" ref={image} />
 

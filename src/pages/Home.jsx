@@ -23,7 +23,7 @@ const App = () => {
       </header>
 
       <main>
-        <div className={`bg-primary ${styles.flexCenter} h-screen`}>
+        <div className={`bg-primary ${styles.flexCenter} lg:h-screen`}>
           <div className={`${styles.boxWidth}`}>
             <Home timeline={tl} ease={ease}/>
           </div>

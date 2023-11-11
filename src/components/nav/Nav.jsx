@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import styles from '../../style'
 
 import { close, menu } from '../../assets'
 import { navLinks } from '../../constants'
@@ -53,18 +54,19 @@ export const Nav = ({ timeline, ease, page }) => {
 
   return (
     <nav className={`fixed w-full z-50 top-0 left-0 sm:px-16 px-6 ${scrolled ? 'bg-nav' : 'bg-non-nav'}`}>
-      <div className='w-full flex py-4 justify-between items-center navbar'>
-        <a href="/"><h1 className='logo text-2xl' ref={el => logo = el}>PurseFlex</h1></a>
+      <div className='w-full'>
+        <div className={`flex ${styles.boxWidth} py-4 justify-between items-center navbar`}>
+          <a href="/"><h1 className='logo text-2xl' ref={el => logo = el}>PurseFlex</h1></a>
 
-        <ul className='list-none sm:flex hidden justify-end items-center flex-1' ref={el => navItems = el}>
-          {navLinks.map((nav, index) => (
-            <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0 border-2 border-white rounded-3xl px-4 py-1 sign-btn' : 'mr-10 hover:text-purple-500'} text-white`}>
-              {nav.page ? <Link to={`${nav.id}`}>{nav.title}</Link> : <Link to={page ? `/purseflex/` : "#nav.id"} onClick={page ? '' : (event) => scrollToSection(event, nav.id)}>{nav.title}</Link>}
-            </li>
-          ))}
-        </ul>
+          <ul className='list-none sm:flex hidden justify-end items-center flex-1' ref={el => navItems = el}>
+            {navLinks.map((nav, index) => (
+              <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0 border-2 border-white rounded-3xl px-4 py-1 sign-btn' : 'mr-10 hover:text-purple-500'} text-white`}>
+                {nav.page ? <Link to={`${nav.id}`}>{nav.title}</Link> : <Link to={page ? `/purseflex/` : "#nav.id"} onClick={page ? '' : (event) => scrollToSection(event, nav.id)}>{nav.title}</Link>}
+              </li>
+            ))}
+          </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => settoggle((prev) => !prev)} />
 
@@ -77,6 +79,7 @@ export const Nav = ({ timeline, ease, page }) => {
               ))}
             </ul>
           </div>
+        </div>
         </div>
       </div>
     </nav>
